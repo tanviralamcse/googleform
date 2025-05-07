@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"] {
+            padding: 8px;
+            width: 100%;
+            margin: 5px 0;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    
+</head>
+<body>
+    <h2>Custom Form</h2>
+    <form id="customForm" action="https://docs.google.com/forms/d/e/1FAIpQLSfzoV6P-1SQF9CUd4ORGLUGV34ckId3MI_Jl8Cm221deKk49w/formResponse" method="POST">
+        
+        <!-- Vorname (First Name) -->
+        <label for="vorname">Vorname:</label>
+        <input type="text" name="entry.234567" id="vorname" required>
+        <br><br>
+
+        <!-- Nachname (Last Name) -->
+        <label for="nachname">Nachname:</label>
+        <input type="text" name="entry.345678" id="nachname" required>
+        <br><br>
+
+        <!-- Handynummer (Phone Number) -->
+        <label for="handynummer">Handynummer:</label>
+        <input type="tel" name="entry.456789" id="handynummer" required>
+        <br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" name="entry.123456" id="email" required>
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        document.getElementById("customForm").onsubmit = function() {
+            alert("Thank you for your submission!");
+            window.location = "https://your-thank-you-page.com";
+        }
+    </script>
+    
+</body>
+</html>
